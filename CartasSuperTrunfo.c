@@ -3,13 +3,13 @@
 int main() {
     // Carta 1
     int populacao1, pontosTuristicos1;
-    float area1, pib1, densidadePopulacional1, pibPerCapita1;
+    float area1, pib1;
     char estado1[100], codigo1[4];
     char cidade1[100];
 
     // Carta 2
     int populacao2, pontosTuristicos2;
-    float area2, pib2, densidadePopulacional2, pibPerCapita2;
+    float area2, pib2;
     char estado2[100], codigo2[4];
     char cidade2[100];
 
@@ -29,11 +29,6 @@ int main() {
     scanf("%f", &pib1);
     printf("Digite o número de pontos turísticos da cidade: ");
     scanf("%d", &pontosTuristicos1);
-    
-    // Calculo da Densidade Populacional
-    densidadePopulacional1 = populacao1 / area1;
-    // Calculo o PIB per Capita
-    pibPerCapita1 = pib1 / populacao1;
 
     // --- Cadastro da Carta 2 ---
     printf("Cadastro da Carta 2:\n");
@@ -51,11 +46,6 @@ int main() {
     scanf("%f", &pib2);
     printf("Digite o número de pontos turísticos da cidade: ");
     scanf("%d", &pontosTuristicos2);
-    
-    // Calculo da Densidade Populacional
-    densidadePopulacional2 = populacao2 / area2;
-    // Calculo o PIB per Capita
-    pibPerCapita2 = pib2 / populacao2; // <<< CORREÇÃO: Calculando para a carta 2
 
     // --- Exibição dos Dados das Cartas ---
     
@@ -73,7 +63,7 @@ int main() {
     // Carta 2
     printf("\n--- Dados da Carta 2 ---\n");
     printf("Código: %s\n", codigo2);
-    printf("Cidade: %s, %s\n", cidade2, estado2); // <<< ALTERADO para exibir cidade e estado
+    printf("Cidade: %s, %s\n", cidade2, estado2);
     printf("População: %d habitantes\n", populacao2);
     printf("Área: %.2f km2\n", area2);
     printf("PIB: R$ %.2f\n", pib2);
